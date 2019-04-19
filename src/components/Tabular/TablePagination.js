@@ -1,11 +1,18 @@
+// @flow
 import React from 'react';
 import { connect } from 'react-redux';
 
 import { setCurrentPage } from '../../actions/filters';
 import { selectFiltered } from '../../selectors/posts';
 
-export class TablePagination extends React.Component {
-  handleOnClick = page => {
+type Props = {
+  setCurrentPage: (page: number) => void,
+  currentPage: number,
+  pagesCount: number,
+};
+
+export class TablePagination extends React.Component<Props> {
+  handleOnClick = (page: number) => {
     this.props.setCurrentPage(page);
   };
   render() {

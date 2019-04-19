@@ -1,11 +1,26 @@
-/* eslint-disable react-native/no-raw-text */
+// @flow
 import React from 'react';
 import moment from 'moment';
 
 import { connect } from 'react-redux';
 import { addPost } from '../../actions/posts';
 
-export class AddPost extends React.Component {
+import type { postType } from '../../flow/exports';
+
+type Props = {
+  addPost: (post: postType) => void,
+  afterAdd: () => void,
+};
+
+type State = {
+  id: string,
+  username: string,
+  postTitle: string,
+  views: string,
+  likes: string,
+  createdAt: string,
+};
+export class AddPost extends React.Component<Props, State> {
   state = {
     id: '',
     username: '',
@@ -15,10 +30,16 @@ export class AddPost extends React.Component {
     createdAt: '',
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     let { id, username, postTitle, likes, views, createdAt } = this.state;
+
+    // parse string values into correct types
     createdAt = moment(createdAt).valueOf();
+    id = parseInt(id);
+    likes = parseInt(likes);
+    views = parseInt(views);
+
     const post = { id, username, postTitle, likes, views, createdAt };
     if (this.validatePost(post)) {
       this.props.addPost(post);
@@ -26,14 +47,14 @@ export class AddPost extends React.Component {
     }
   };
 
-  handleChange = (inputName, inputValue) => {
+  handleChange = (inputName: string, inputValue: string) => {
     this.setState(state => ({
       ...state,
       [inputName]: inputValue,
     }));
   };
 
-  validatePost = post => {
+  validatePost = (post: postType) => {
     const no_empty_fields = Object.values(post).every(val => !!val);
     if (no_empty_fields) return true;
   };
@@ -51,7 +72,7 @@ export class AddPost extends React.Component {
           <input
             placeholder="User Name"
             type="text"
-            value={this.state.userName}
+            value={this.state.username}
             onChange={e => this.handleChange('username', e.target.value)}
           />
           <input

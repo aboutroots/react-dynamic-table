@@ -1,8 +1,18 @@
+// @flow
 import * as React from 'react';
 import moment from 'moment';
 
-export default function TableItem(props) {
-  const { id, username, postTitle, views, likes, createdAt, active } = props;
+import type { postType } from '../../flow/exports';
+
+export default function TableItem({
+  id,
+  username,
+  postTitle,
+  views,
+  likes,
+  createdAt,
+  active,
+}: postType) {
   const createdAtFormatted = moment(createdAt).format(moment.HTML5_FMT.DATE);
   return (
     <div className={'TableItem' + (active ? ' TableItem--active' : '')}>

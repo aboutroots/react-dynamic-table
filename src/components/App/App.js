@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Modal from 'react-modal';
@@ -11,29 +12,32 @@ import './App.css';
 
 Modal.setAppElement('#root');
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      modalIsOpen: false,
-    };
+type Props = {
+  authenticateUser: (username: string) => void,
+  fetchPostsFromApi: () => void,
+};
 
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
+type State = {
+  modalIsOpen: boolean,
+};
+
+class App extends Component<Props, State> {
+  state = {
+    modalIsOpen: false,
+  };
 
   componentDidMount() {
     this.props.authenticateUser('John15');
     this.props.fetchPostsFromApi();
   }
 
-  openModal() {
+  openModal = () => {
     this.setState({ modalIsOpen: true });
-  }
+  };
 
-  closeModal() {
+  closeModal = () => {
     this.setState({ modalIsOpen: false });
-  }
+  };
 
   render() {
     return (

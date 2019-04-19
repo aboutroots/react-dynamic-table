@@ -1,17 +1,26 @@
+// @flow
 import React from 'react';
 
 import { connect } from 'react-redux';
 import { setItemsOnPageFilter, setUserNameFilter } from '../../actions/filters';
 
-export class TableFilters extends React.Component {
-  handleItemsOnPageChange = e => {
-    const itemsOnPage = parseInt(e.target.value);
+type Props = {
+  setItemsOnPageFilter: (itemsOnPage: number) => void,
+  setUserNameFilter: (userNameFilter: string) => void,
+  userNameFilter: string,
+  itemsOnPage: number,
+  users: Array<string>,
+};
+
+export class TableFilters extends React.Component<Props> {
+  handleItemsOnPageChange = (e: SyntheticEvent<HTMLSelectElement>) => {
+    const itemsOnPage = parseInt(e.currentTarget.value);
     this.props.setItemsOnPageFilter(itemsOnPage);
   };
 
-  handleUserNameChange = e => {
+  handleUserNameChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
     // TODO: handle autosugestions using props.users
-    const userNameFilter = e.target.value;
+    const userNameFilter = e.currentTarget.value;
     this.props.setUserNameFilter(userNameFilter);
   };
 
@@ -22,6 +31,7 @@ export class TableFilters extends React.Component {
           <p>Filter by user</p>
           <input
             type="text"
+            placeholder="Start writing user name..."
             value={this.props.userNameFilter}
             onChange={this.handleUserNameChange}
           />
@@ -45,7 +55,7 @@ export class TableFilters extends React.Component {
 const mapStateToProps = ({ filters, posts }) => ({
   itemsOnPage: filters.itemsOnPage,
   userNameFilter: filters.userNameFilter,
-  // users: posts.map(post => post.userName),
+  users: posts.map(post => post.userName),
 });
 
 const mapDispatchToProps = dispatch => ({

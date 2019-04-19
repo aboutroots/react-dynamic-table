@@ -1,13 +1,16 @@
+// @flow
 import React from 'react';
 import { connect } from 'react-redux';
 
 import TableItem from './TableItem';
 import { selectFiltered, selectPaginated } from '../../selectors/posts';
 
-export function TableItems(props) {
+import type { postType } from '../../flow/exports';
+
+export function TableItems({ posts }: { posts: Array<postType> }) {
   return (
     <div className="TableItems">
-      {props.posts.map((post, idx) => (
+      {posts.map((post, idx) => (
         <TableItem {...post} key={idx} />
       ))}
     </div>
