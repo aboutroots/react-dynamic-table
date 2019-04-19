@@ -20,7 +20,10 @@ export class AddPost extends React.Component {
     let { id, username, postTitle, likes, views, createdAt } = this.state;
     createdAt = moment(createdAt).valueOf();
     const post = { id, username, postTitle, likes, views, createdAt };
-    this.validatePost(post) && this.props.addPost(post);
+    if (this.validatePost(post)) {
+      this.props.addPost(post);
+      this.props.afterAdd();
+    }
   };
 
   handleChange = (inputName, inputValue) => {
