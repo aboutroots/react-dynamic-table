@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import TableItem from "./TableItem";
+import TableItem from './TableItem';
 
 export default function TableItems() {
   return (

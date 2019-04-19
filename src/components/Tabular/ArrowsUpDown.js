@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
 export class ArrowsUpDown extends React.Component {
   handleUp = () => {};

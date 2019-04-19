@@ -15,12 +15,26 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "@callstack/eslint-config/node",
+      "plugin:react/recommended",
+      "prettier/react"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@callstack/eslint-config": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
 }

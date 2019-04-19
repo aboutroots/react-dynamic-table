@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 export class TablePagination extends React.Component {
-  handleOnClick = (page) => {};
+  handleOnClick = page => {};
   render() {
     return (
       <div className="TablePagination">

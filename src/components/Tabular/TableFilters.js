@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-raw-text */
-import React from "react";
+import React from 'react';
 
 export class TableFilters extends React.Component {
   render() {

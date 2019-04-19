@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import TableFilters from "./TableFilters";
-import TableHeader from "./TableHeader";
-import TableItems from "./TableItems";
-import TablePagination from "./TablePagination";
+import TableFilters from './TableFilters';
+import TableHeader from './TableHeader';
+import TableItems from './TableItems';
+import TablePagination from './TablePagination';
 
 export class Tabular extends Component {
   render() {

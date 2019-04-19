@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import ArrowsUpDown from "./ArrowsUpDown";
+import ArrowsUpDown from './ArrowsUpDown';
 
 // mapping code names to human readable names
 const cols = {
-  id: "#ID",
-  username: "User Name",
-  postTitle: "Post Title",
-  views: "Views",
-  likes: "Likes",
-  createdAt: "Created At"
+  id: '#ID',
+  username: 'User Name',
+  postTitle: 'Post Title',
+  views: 'Views',
+  likes: 'Likes',
+  createdAt: 'Created At',
 };
 
 export default function TableHeader() {
