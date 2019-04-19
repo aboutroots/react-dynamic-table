@@ -1,4 +1,6 @@
-export const authenticateUser = userName => ({
+//@flow
+
+export const authenticateUser = (userName: string) => ({
   type: 'AUTHENTICATE_USER',
   userName,
 });

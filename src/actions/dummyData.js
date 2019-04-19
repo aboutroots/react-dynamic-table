@@ -1,6 +1,9 @@
+//@flow
 import moment from 'moment';
 
-export const dummyPosts = [
+import type { postType } from '../flow/exports';
+
+export const dummyPosts: Array<postType> = [
   {
     id: 1,
     username: 'John15',
