@@ -1,5 +1,9 @@
 /* eslint-disable react-native/no-raw-text */
 import React from 'react';
+import moment from 'moment';
+
+import { connect } from 'react-redux';
+import { addPost } from '../../actions/posts';
 
 export class AddPost extends React.Component {
   state = {
@@ -13,6 +17,10 @@ export class AddPost extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    let { id, username, postTitle, likes, views, createdAt } = this.state;
+    createdAt = moment(createdAt).valueOf();
+    const post = { id, username, postTitle, likes, views, createdAt };
+    this.validatePost(post) && this.props.addPost(post);
   };
 
   handleChange = (inputName, inputValue) => {
@@ -20,6 +28,11 @@ export class AddPost extends React.Component {
       ...state,
       [inputName]: inputValue,
     }));
+  };
+
+  validatePost = post => {
+    const no_empty_fields = Object.values(post).every(val => !!val);
+    if (no_empty_fields) return true;
   };
 
   render() {
@@ -69,4 +82,11 @@ export class AddPost extends React.Component {
   }
 }
 
-export default AddPost;
+const mapDispatchToProps = dispatch => ({
+  addPost: post => dispatch(addPost(post)),
+});
+
+export default connect(
+  undefined,
+  mapDispatchToProps
+)(AddPost);
