@@ -1,33 +1,127 @@
+html, body {
+  height: 100%;
+}
+
+#root {
+  --color1: rgb(255, 253, 244);
+  --color2: rgb(224, 223, 214);
+  --color3: rgb(204, 202, 195);
+}
+
 .App {
+  height: 100%;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
+  padding: 2rem;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Tabular {
+  margin: 2rem 10%;
+  border: 1px var(--color3) solid;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.TableFilters {
+  padding: 1rem;
+  display: flex;
+}
+.TableHeader {
+  background: var(--color1);
+  display: flex;
+  justify-content: space-between;
+}
+.TableHeader__col {
+  border-top: 1px var(--color3) solid;
+  border-right: 1px var(--color3) solid;
+  border-bottom: 1px var(--color3) solid;
+  padding: 1rem;
+  font-weight: 700;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.TableHeader__col:last-of-type {
+  border-right: none;
+}
+
+
+.TableItem {
+  background: var(--color1);
+  border-bottom: 1px var(--color3) dashed;
+  display: flex;
+  justify-content: space-between;
+}
+
+.TableItem--active {
+  background: var(--color2);
+}
+
+.TableItem__col {
+  margin: 0;
+  padding: 1rem;
+  flex: 1;
+  text-align: left;
+  border-right: 1px var(--color3) dashed;
+}
+
+.TableItem__col:last-of-type {
+  border-right: none;
+}
+
+.TablePagination {
+  display: flex;
+  justify-content: center;
+}
+
+.TablePagination__page {
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.TablePagination__page--active {
+  background: gray;
+  color: white;
+  border-radius: 50%;
+}
+
+.ArrowsUpDown {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+
+.AddPost {
+  margin: 2rem 10%;
+  padding: 2rem 0;
+  border-radius: 5px;
+  display: flex;
+}
+
+.AddPost form {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.AddPost input, .AddPost button {
+  flex: 1;
+  padding: 1rem;
+  margin: 0.2rem 0;
+  min-width: 100px;
+}
+
+.AddPost button {
+  background: #282C34;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
 }
