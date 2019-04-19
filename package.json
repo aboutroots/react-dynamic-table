@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
     "flow": "^0.2.3",
     "moment": "^2.24.0",
     "react": "^16.8.6",
@@ -11,6 +13,7 @@
     "react-modal": "^3.8.1",
     "react-redux": "^7.0.2",
     "react-scripts": "2.1.8",
+    "react-test-renderer": "^16.8.6",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
@@ -32,6 +35,11 @@
       }
     }
   },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -40,6 +48,7 @@
   ],
   "devDependencies": {
     "@callstack/eslint-config": "^4.2.0",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.16.0",
     "eslint-plugin-import": "^2.17.2"
   }

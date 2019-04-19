@@ -10,7 +10,7 @@ import { fetchPostsFromApi } from '../../actions/posts';
 
 import './App.css';
 
-Modal.setAppElement('#root');
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
 
 type Props = {
   authenticateUser: (username: string) => void,
@@ -21,7 +21,7 @@ type State = {
   modalIsOpen: boolean,
 };
 
-class App extends Component<Props, State> {
+export class App extends Component<Props, State> {
   state = {
     modalIsOpen: false,
   };
