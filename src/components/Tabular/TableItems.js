@@ -1,11 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import TableItem from './TableItem';
+import { selectFiltered } from '../../selectors/posts';
 
-export default function TableItems() {
+export function TableItems(props) {
   return (
     <div className="TableItems">
-      <TableItem />
+      {props.posts.map((post, idx) => (
+        <TableItem {...post} key={idx} />
+      ))}
     </div>
   );
 }
+const mapStateToProps = state => {
+  const activeUser = state.auth.activeUser;
+  const filtered = selectFiltered(state.posts, activeUser, state.filters);
+  return {
+    posts: filtered,
+  };
+};
+
+export default connect(mapStateToProps)(TableItems);
