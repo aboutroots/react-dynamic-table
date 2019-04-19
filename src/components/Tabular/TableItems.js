@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import TableItem from './TableItem';
-import { selectFiltered } from '../../selectors/posts';
+import { selectFiltered, selectPaginated } from '../../selectors/posts';
 
 export function TableItems(props) {
   return (
@@ -16,8 +16,9 @@ export function TableItems(props) {
 const mapStateToProps = state => {
   const activeUser = state.auth.activeUser;
   const filtered = selectFiltered(state.posts, activeUser, state.filters);
+  const paginated = selectPaginated(filtered, state.filters);
   return {
-    posts: filtered,
+    posts: paginated,
   };
 };
 

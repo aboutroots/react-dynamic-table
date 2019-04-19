@@ -33,3 +33,10 @@ export const selectFiltered = (
       return sortDirection === 'asc' ? compare : -compare;
     });
 };
+
+export const selectPaginated = (posts, { currentPage, itemsOnPage }) => {
+  const slice_start = currentPage * itemsOnPage;
+  const slice_end = slice_start + itemsOnPage;
+
+  return posts.slice(slice_start, slice_end);
+};
