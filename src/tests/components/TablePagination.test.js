@@ -23,7 +23,7 @@ test('should render TablePagination', () => {
 
 test('should set current page', () => {
   wrapper
-    .find('p')
+    .find('.TablePagination__page')
     .at(1)
     .simulate('click');
   expect(setCurrentPage).toHaveBeenLastCalledWith(1);

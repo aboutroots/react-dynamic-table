@@ -8,7 +8,7 @@ exports[`should render App 1`] = `
   <header
     className="App-header"
   >
-    Sortable React table
+    Sortable React Table
   </header>
   <div
     className="content-container"
@@ -44,10 +44,10 @@ exports[`should render App 1`] = `
         <h2
           className="AddPost__title"
         >
-          Add new Post data
+          Add new post data
         </h2>
         <button
-          className="App__button btn"
+          className="App__button btn btn--secondary"
           onClick={[Function]}
         >
           Close

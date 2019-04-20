@@ -13,6 +13,7 @@ exports[`should render TableFilters properly 1`] = `
       Filter by user
     </p>
     <input
+      className="inpt"
       onChange={[Function]}
       placeholder="Start writing..."
       type="text"
@@ -69,6 +70,7 @@ exports[`should render TableFilters with alt data properly 1`] = `
       Filter by user
     </p>
     <input
+      className="inpt"
       onChange={[Function]}
       placeholder="Start writing..."
       type="text"
