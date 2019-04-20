@@ -54,9 +54,25 @@ export class AddPost extends React.Component<Props, State> {
     }));
   };
 
-  validatePost = (post: postType) => {
-    const no_empty_fields = Object.values(post).every(val => !!val);
-    if (no_empty_fields) return true;
+  validatePost = ({
+    id,
+    username,
+    postTitle,
+    likes,
+    views,
+    createdAt,
+  }: postType) => {
+    let numberTypesFailed = [id, likes, views].some(
+      val => Number.isNaN(val) || val < 0
+    );
+    let stringTypesFailed = [username, postTitle].some(
+      val => val.trim() === ''
+    );
+    let dateNumberFailed = Number.isNaN(createdAt);
+
+    return numberTypesFailed || stringTypesFailed || dateNumberFailed
+      ? false
+      : true;
   };
 
   render() {

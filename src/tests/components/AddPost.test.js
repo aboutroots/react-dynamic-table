@@ -22,7 +22,7 @@ test('should call addPost on submit', () => {
     postTitle: 'test',
     views: '1',
     likes: '1',
-    createdAt: '1970-01-01',
+    createdAt: moment('1970-01-01', 'YYYY-MM-DD').valueOf(),
   });
   wrapper.find('form').simulate('submit', { preventDefault: () => {} });
   expect(addPost).toHaveBeenLastCalledWith({
@@ -31,7 +31,7 @@ test('should call addPost on submit', () => {
     postTitle: 'test',
     views: 1,
     likes: 1,
-    createdAt: moment('1970-01-01').valueOf(),
+    createdAt: moment('1970-01-01', 'YYYY-MM-DD').valueOf(),
   });
 });
 
@@ -42,7 +42,7 @@ test('should call afterAdd on submit', () => {
     postTitle: 'test',
     views: '1',
     likes: '1',
-    createdAt: '1970-01-01',
+    createdAt: moment('1970-01-01', 'YYYY-MM-DD').valueOf(),
   });
   wrapper.find('form').simulate('submit', { preventDefault: () => {} });
   expect(afterAdd).toHaveBeenCalled();
@@ -55,7 +55,7 @@ test('should not add post with any empty value', () => {
     postTitle: 'test',
     views: '1',
     likes: '1',
-    createdAt: '1970-01-01',
+    createdAt: moment('1970-01-01', 'YYYY-MM-DD').valueOf(),
   };
   Object.keys(defaultState).forEach(key => {
     wrapper.setState({

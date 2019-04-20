@@ -5,6 +5,6 @@ export type postType = {
   postTitle: string,
   views: number,
   likes: number,
-  createdAt: string,
+  createdAt: number,
   active?: boolean,
 };
