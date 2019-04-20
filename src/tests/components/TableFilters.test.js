@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { TableFilters } from '../TableFilters';
-import { filters, altFilters } from './__fixtures';
+import { TableFilters } from '../../components/Tabular/TableFilters';
+import { filters, altFilters } from '../__fixtures';
 
 let wrapper,
   userNameFilter,

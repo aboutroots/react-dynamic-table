@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { TablePagination } from '../TablePagination';
+import { TablePagination } from '../../components/Tabular/TablePagination';
 
 let wrapper, setCurrentPage, currentPage, pagesCount;
 

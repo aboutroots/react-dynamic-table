@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ArrowsUpDown } from '../ArrowsUpDown';
+import { ArrowsUpDown } from '../../components/Tabular/ArrowsUpDown';
 
 let wrapper, setSortByFilter, setSortDirectionFilter, columnName;
 

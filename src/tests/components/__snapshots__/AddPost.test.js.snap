@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddPost properly 1`] = `
+<div
+  className="AddPost"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      placeholder="#ID"
+      type="number"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="User Name"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Post Title"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Views"
+      type="number"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Likes"
+      type="number"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Created At"
+      type="date"
+      value=""
+    />
+    <button
+      type="submit"
+    >
+      Add Post
+    </button>
+  </form>
+</div>
+`;
