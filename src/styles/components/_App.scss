@@ -1,0 +1,24 @@
+.App {
+  height: 100%;
+  text-align: center;
+  padding-bottom: 4rem;
+  color: $color4;
+}
+
+.App-header {
+  padding: 2rem;
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.App__button-container {
+  width: 100%;
+  display: flex;
+}
+
+.App__button {
+  font-size: $font-size-large;
+  margin-left: 0;
+}

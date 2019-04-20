@@ -5,45 +5,53 @@ exports[`should render AddPost properly 1`] = `
   className="AddPost"
 >
   <form
+    className="AddPost__form"
     onSubmit={[Function]}
   >
     <input
+      className="AddPost__form-element"
       onChange={[Function]}
       placeholder="#ID"
       type="number"
       value=""
     />
     <input
+      className="AddPost__form-element"
       onChange={[Function]}
       placeholder="User Name"
       type="text"
       value=""
     />
     <input
+      className="AddPost__form-element"
       onChange={[Function]}
       placeholder="Post Title"
       type="text"
       value=""
     />
     <input
+      className="AddPost__form-element"
       onChange={[Function]}
       placeholder="Views"
       type="number"
       value=""
     />
     <input
+      className="AddPost__form-element"
       onChange={[Function]}
       placeholder="Likes"
       type="number"
       value=""
     />
     <input
+      className="AddPost__form-element"
       onChange={[Function]}
       placeholder="Created At"
       type="date"
       value=""
     />
     <button
+      className="AddPost__form-element AddPost__button"
       type="submit"
     >
       Add Post

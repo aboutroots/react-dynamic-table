@@ -1,0 +1,23 @@
+.AddPost {
+  padding: 2rem 0;
+  border-radius: 5px;
+  display: flex;
+}
+
+.AddPost__title {
+  margin-bottom: 0;
+  color: gray;
+}
+
+.AddPost__form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.AddPost__form-element{
+  flex: 1;
+  padding: $m-size;
+  margin: $s-size 0;
+  font-size: $font-size-normal;
+}

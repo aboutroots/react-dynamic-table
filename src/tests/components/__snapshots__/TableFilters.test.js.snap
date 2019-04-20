@@ -5,22 +5,26 @@ exports[`should render TableFilters properly 1`] = `
   className="TableFilters"
 >
   <div
-    className="TableFilters__user"
+    className="TableFilters__filter"
   >
-    <p>
+    <p
+      className="TableFilters__title"
+    >
       Filter by user
     </p>
     <input
       onChange={[Function]}
-      placeholder="Start writing user name..."
+      placeholder="Start writing..."
       type="text"
       value=""
     />
   </div>
   <div
-    className="TableFilters__pagination"
+    className="TableFilters__filter"
   >
-    <p>
+    <p
+      className="TableFilters__title"
+    >
       Number of visible rows
     </p>
     <select
@@ -57,22 +61,26 @@ exports[`should render TableFilters with alt data properly 1`] = `
   className="TableFilters"
 >
   <div
-    className="TableFilters__user"
+    className="TableFilters__filter"
   >
-    <p>
+    <p
+      className="TableFilters__title"
+    >
       Filter by user
     </p>
     <input
       onChange={[Function]}
-      placeholder="Start writing user name..."
+      placeholder="Start writing..."
       type="text"
       value="b"
     />
   </div>
   <div
-    className="TableFilters__pagination"
+    className="TableFilters__filter"
   >
-    <p>
+    <p
+      className="TableFilters__title"
+    >
       Number of visible rows
     </p>
     <select

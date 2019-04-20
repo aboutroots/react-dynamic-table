@@ -78,44 +78,55 @@ export class AddPost extends React.Component<Props, State> {
   render() {
     return (
       <div className="AddPost">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="AddPost__form">
           <input
             placeholder="#ID"
             type="number"
             value={this.state.id}
             onChange={e => this.handleChange('id', e.target.value)}
+            className="AddPost__form-element inpt"
           />
           <input
             placeholder="User Name"
             type="text"
             value={this.state.username}
             onChange={e => this.handleChange('username', e.target.value)}
+            className="AddPost__form-element inpt"
           />
           <input
             placeholder="Post Title"
             type="text"
             value={this.state.postTitle}
             onChange={e => this.handleChange('postTitle', e.target.value)}
+            className="AddPost__form-element inpt"
           />
           <input
             placeholder="Views"
             type="number"
             value={this.state.views}
             onChange={e => this.handleChange('views', e.target.value)}
+            className="AddPost__form-element inpt"
           />
           <input
             placeholder="Likes"
             type="number"
             value={this.state.likes}
             onChange={e => this.handleChange('likes', e.target.value)}
+            className="AddPost__form-element inpt"
           />
           <input
             placeholder="Created At"
             type="date"
             value={this.state.createdAt}
             onChange={e => this.handleChange('createdAt', e.target.value)}
+            className="AddPost__form-element inpt"
           />
-          <button type="submit">Add Post</button>
+          <button
+            type="submit"
+            className="AddPost__form-element AddPost__button btn"
+          >
+            Add Post
+          </button>
         </form>
       </div>
     );

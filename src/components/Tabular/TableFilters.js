@@ -27,17 +27,18 @@ export class TableFilters extends React.Component<Props> {
   render() {
     return (
       <div className="TableFilters">
-        <div className="TableFilters__user">
-          <p>Filter by user</p>
+        <div className="TableFilters__filter">
+          <p className="TableFilters__title">Filter by user</p>
           <input
             type="text"
-            placeholder="Start writing user name..."
+            placeholder="Start writing..."
             value={this.props.userNameFilter}
             onChange={this.handleUserNameChange}
+            className="inpt"
           />
         </div>
-        <div className="TableFilters__pagination">
-          <p>Number of visible rows</p>
+        <div className="TableFilters__filter">
+          <p className="TableFilters__title">Number of visible rows</p>
           <select
             value={this.props.itemsOnPage}
             onChange={this.handleItemsOnPageChange}

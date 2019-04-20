@@ -1,0 +1,48 @@
+html, body {
+  height: 100%;
+  background: #eee;
+}
+
+body {
+  // Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html > * {
+  box-sizing: border-box;
+}
+
+.content-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn {
+  margin: $l-size;
+  padding: $m-size;
+  border: 3px solid palevioletred;
+  color: white;
+  border-radius: 4px;
+  background: palevioletred;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.12),
+                      0 1px 2px 0 rgba(0,0,0,.24);
+  -moz-box-shadow:    0 1px 3px 0 rgba(0,0,0,.12),
+                      0 1px 2px 0 rgba(0,0,0,.24);
+  box-shadow:         0 1px 3px 0 rgba(0,0,0,.12),
+                      0 1px 2px 0 rgba(0,0,0,.24);
+}
+
+.btn--secondary {
+  background: grey;
+  border-color: grey;
+}
+
+.inpt {
+  border: 3px solid palevioletred;
+  color: palevioletred;
+  border-radius: 4px;
+}

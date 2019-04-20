@@ -1,7 +1,7 @@
 // @flow
 type State = {
-  sortBy: string,
-  sortDirection: string,
+  sortBy: 'id' | 'username' | 'postTitle' | 'views' | 'likes' | 'createdAt',
+  sortDirection: 'asc' | 'desc',
   userNameFilter: string,
   itemsOnPage: number,
   currentPage: number,
@@ -9,7 +9,7 @@ type State = {
 
 const defaultState = {
   sortBy: 'createdAt',
-  sortDirection: 'desc',
+  sortDirection: 'asc',
   userNameFilter: '',
   itemsOnPage: 5,
   currentPage: 0,

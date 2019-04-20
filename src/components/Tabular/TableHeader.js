@@ -5,11 +5,11 @@ import ArrowsUpDown from './ArrowsUpDown';
 // mapping code names to human readable names
 const cols = {
   id: '#ID',
-  username: 'User Name',
-  postTitle: 'Post Title',
-  views: 'Views',
-  likes: 'Likes',
-  createdAt: 'Created At',
+  username: 'USERNAME',
+  postTitle: 'POST TITLE',
+  views: 'VIEWS',
+  likes: 'LIKES',
+  createdAt: 'CREATED AT',
 };
 
 export default function TableHeader() {

@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore.js';
 
+import './styles/style.scss';
+
 const store = configureStore();
 
 const jsx = (

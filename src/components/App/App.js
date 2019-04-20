@@ -8,8 +8,6 @@ import AddPost from '../AddPost/AddPost';
 import { authenticateUser } from '../../actions/auth';
 import { fetchPostsFromApi } from '../../actions/posts';
 
-import './App.css';
-
 if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
 
 type Props = {
@@ -42,18 +40,31 @@ export class App extends Component<Props, State> {
   render() {
     return (
       <div className="App" id="app">
-        <header className="App-header">{'{ Callstack }'}</header>
-        <button onClick={this.openModal}>Open Modal</button>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          contentLabel="Add Post Modal"
-        >
-          <h2>Add new Post data</h2>
-          <button onClick={this.closeModal}>Close</button>
-          <AddPost afterAdd={this.closeModal} />
-        </Modal>
-        <Tabular />
+        <header className="App-header">{'Sortable React Table'}</header>
+        <div className="content-container">
+          <div className="App__button-container">
+            <button onClick={this.openModal} className="App__button btn">
+              Add new post
+            </button>
+          </div>
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onRequestClose={this.closeModal}
+            contentLabel="Add Post Modal"
+          >
+            <div className="content-container">
+              <h2 className="AddPost__title">Add new post data</h2>
+              <button
+                className="App__button btn btn--secondary"
+                onClick={this.closeModal}
+              >
+                Close
+              </button>
+              <AddPost afterAdd={this.closeModal} />
+            </div>
+          </Modal>
+          <Tabular />
+        </div>
       </div>
     );
   }

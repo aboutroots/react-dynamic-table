@@ -24,13 +24,13 @@ export class TablePagination extends React.Component<Props> {
             className += ' TablePagination__page--active';
           }
           return (
-            <p
+            <div
               className={className}
               key={i}
               onClick={() => this.handleOnClick(i)}
             >
               {i + 1}
-            </p>
+            </div>
           );
         })}
       </div>

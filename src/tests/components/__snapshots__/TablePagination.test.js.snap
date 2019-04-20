@@ -4,40 +4,40 @@ exports[`should render TablePagination 1`] = `
 <div
   className="TablePagination"
 >
-  <p
+  <div
     className="TablePagination__page TablePagination__page--active"
     key="0"
     onClick={[Function]}
   >
     1
-  </p>
-  <p
+  </div>
+  <div
     className="TablePagination__page"
     key="1"
     onClick={[Function]}
   >
     2
-  </p>
-  <p
+  </div>
+  <div
     className="TablePagination__page"
     key="2"
     onClick={[Function]}
   >
     3
-  </p>
-  <p
+  </div>
+  <div
     className="TablePagination__page"
     key="3"
     onClick={[Function]}
   >
     4
-  </p>
-  <p
+  </div>
+  <div
     className="TablePagination__page"
     key="4"
     onClick={[Function]}
   >
     5
-  </p>
+  </div>
 </div>
 `;
